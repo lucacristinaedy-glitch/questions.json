@@ -2,23 +2,9 @@
   {
     "id": 1,
     "module": "Modulul 1",
-    "question": "Ce se va afişa pe ecran în urma execuţiei următorului program?\n#include <stdio.h>\nvoid main() {\n  int a=1, b=0, i;\n  for (i=0; i<10; i++) {\n    b=a;\n    a=i;\n  }\n  printf(\"%d\", b);\n}",
-    "options": ["8", "9", "10", "0123456789"],
+    "question": "Ce se va afişa pe ecran în urma execuţiei?\nint a=1, b=0, i;\nfor (i=0; i<10; i++) { b=a; a=i; }\nprintf(\"%d\", b);",
+    "options": ["8", "9", "10", "0"],
     "answer": 0
-  },
-  {
-    "id": 2,
-    "module": "Modulul 1",
-    "question": "Care din următoarele expresii sunt echivalente cu a[i]?",
-    "options": ["*(a+i)", "i [a]", "&a[i]", "*(a+a)", "*(a+i*sizeof(a[i]))"],
-    "answer": 0
-  },
-  {
-    "id": 101,
-    "module": "Modulul 2",
-    "question": "Exprimați în binar, octal, hexazecimal numărul zecimal 3.625",
-    "options": ["11.2000; 3.42; 4.20", "11.101; 3.5; 3.A", "2.1001; 3.52; 2D", "11.1; 3.20; 3.2A"],
-    "answer": 1
   },
   {
     "id": 104,
@@ -28,6 +14,13 @@
     "answer": 1
   },
   {
+    "id": 110,
+    "module": "Modulul 2",
+    "question": "Protocolul IP (Internet Protocol) funcționează la nivelul:",
+    "options": ["Aplicație", "Transport", "Rețea", "Legătură de date"],
+    "answer": 2
+  },
+  {
     "id": 205,
     "module": "Modulul 3",
     "question": "Într-un model relațional, un rând dintr-un tabel se mai numește și:",
@@ -35,31 +28,10 @@
     "answer": 2
   },
   {
-    "id": 209,
-    "module": "Modulul 3",
-    "question": "Operația 'JOIN' în SQL servește la:",
-    "options": ["Combinarea rândurilor din două sau mai multe tabele pe baza unei coloane comune", "Adunarea valorilor numerice dintr-o coloană", "Ștergerea legăturilor între tabele", "Crearea unei baze de date noi"],
-    "answer": 0
-  },
-  {
     "id": 305,
-    "module": "Modulul 3 - Web",
+    "module": "Modulul 3",
     "question": "Ce înseamnă PHP?",
     "options": ["Personal Hypertext Processor", "PHP: Hypertext Preprocessor", "Private Home Page", "Personal Home Page"],
-    "answer": 1
-  },
-  {
-    "id": 313,
-    "module": "Modulul 3 - Web",
-    "question": "Cum se creează un hyperlink în HTML?",
-    "options": ["<a url='http://google.com'>Google</a>", "<a href='http://google.com'>Google</a>", "<a>http://google.com</a>", "<link src='http://google.com'>Google</link>"],
-    "answer": 1
-  },
-  {
-    "id": 130,
-    "module": "Modulul 2",
-    "question": "Care este principala diferență între protocoalele TCP și UDP?",
-    "options": ["TCP este mai rapid, UDP este mai sigur", "TCP este orientat pe conexiune (garantează livrarea), UDP este fără conexiune", "UDP se folosește doar pentru e-mail", "Nu există nicio diferență"],
     "answer": 1
   },
   {
@@ -68,5 +40,12 @@
     "question": "Care este operatorul folosit pentru a accesa un membru al unei structuri printr-un pointer?",
     "options": [".", "*", "&", "->"],
     "answer": 3
+  },
+  {
+    "id": 130,
+    "module": "Modulul 2",
+    "question": "Care este principala diferență între protocoalele TCP și UDP?",
+    "options": ["TCP este rapid, UDP e sigur", "TCP e orientat pe conexiune, UDP e fără conexiune", "UDP e doar pt e-mail", "Nu e nicio diferență"],
+    "answer": 1
   }
 ]
