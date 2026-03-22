@@ -1,3 +1,142 @@
 [
-  { "id": 1, "module": "Modulul 1", "question": "Test?", "options": ["Da", "Nu"], "answer": 0 }
+  {
+    "id": 1,
+    "module": "Modulul 1",
+    "question": "Ce se va afişa pe ecran în urma execuţiei?\n#include <stdio.h>\nvoid main() {\n  int a=1, b=0, i;\n  for (i=0; i<10; i++) {\n    b=a;\n    a=i;\n  }\n  printf(\"%d\", b);\n}",
+    "options": ["8", "9", "10", "0"],
+    "answer": 0
+  },
+  {
+    "id": 2,
+    "module": "Modulul 1",
+    "question": "Care din următoarele expresii sunt echivalente cu a[i]?",
+    "options": ["*(a+i)", "i [a]", "&a[i]", "*(a+a)"],
+    "answer": 0
+  },
+  {
+    "id": 3,
+    "module": "Modulul 1",
+    "question": "Instrucţiunea k++ este echivalentă cu:",
+    "options": ["k=k+1", "k=k+k", "k+=k", "k=k+sizeof(k)"],
+    "answer": 0
+  },
+  {
+    "id": 6,
+    "module": "Modulul 1",
+    "question": "Care este valoarea expresiei 5/2 + 5.0/2.0 + 5/2.0?",
+    "options": ["6.5", "7.0", "6.0", "7.5"],
+    "answer": 1
+  },
+  {
+    "id": 7,
+    "module": "Modulul 1",
+    "question": "Ce face funcția `malloc`?",
+    "options": ["Alocă memorie în segmentul de date", "Alocă memorie în heap", "Alocă memorie în stivă", "Eliberează memoria"],
+    "answer": 1
+  },
+  {
+    "id": 10,
+    "module": "Modulul 1",
+    "question": "Ce returnează operatorul `sizeof`?",
+    "options": ["Dimensiunea în biți", "Dimensiunea în octeți (bytes)", "Numărul de elemente", "Adresa variabilei"],
+    "answer": 1
+  },
+  {
+    "id": 17,
+    "module": "Modulul 1",
+    "question": "Complexitatea Mergesort t(n) = 2t(n/2) + n este:",
+    "options": ["Θ(n log n)", "Θ(n)", "Θ(n^2)", "Θ(log n)"],
+    "answer": 0
+  },
+  {
+    "id": 101,
+    "module": "Modulul 2",
+    "question": "Convertiţi în zecimal numărul DA.C (baza 16):",
+    "options": ["216.5", "218.75", "218.5", "220"],
+    "answer": 1
+  },
+  {
+    "id": 104,
+    "module": "Modulul 2",
+    "question": "Unitatea aritmetico-logică (UAL) face parte din:",
+    "options": ["Memoria internă", "Unitatea Centrală de Prelucrare (CPU)", "Dispozitive de intrare", "Bus-ul de date"],
+    "answer": 1
+  },
+  {
+    "id": 107,
+    "module": "Modulul 2",
+    "question": "În ierarhia memoriilor, memoria Cache este:",
+    "options": ["Mai lentă decât RAM-ul", "Mai rapidă decât registrele CPU", "O memorie rapidă situată între CPU și RAM", "O memorie de tip volatil"],
+    "answer": 2
+  },
+  {
+    "id": 110,
+    "module": "Modulul 2",
+    "question": "Protocolul IP (Internet Protocol) funcționează la nivelul:",
+    "options": ["Aplicație", "Transport", "Rețea", "Legătură de date"],
+    "answer": 2
+  },
+  {
+    "id": 205,
+    "module": "Modulul 3",
+    "question": "Într-un model relațional, un rând dintr-un tabel se mai numește și:",
+    "options": ["Atribut", "Domeniu", "Tuplu", "Relație"],
+    "answer": 2
+  },
+  {
+    "id": 207,
+    "module": "Modulul 3",
+    "question": "Comanda SQL 'SELECT DISTINCT' este folosită pentru:",
+    "options": ["A selecta doar valorile unice", "A șterge duplicatele", "A număra rândurile", "A schimba numele coloanei"],
+    "answer": 0
+  },
+  {
+    "id": 209,
+    "module": "Modulul 3",
+    "question": "Operația 'JOIN' în SQL servește la:",
+    "options": ["Combinarea rândurilor din tabele pe baza unei coloane comune", "Adunarea valorilor", "Ștergerea legăturilor", "Crearea unei baze noi"],
+    "answer": 0
+  },
+  {
+    "id": 305,
+    "module": "Modulul 3",
+    "question": "Ce înseamnă PHP?",
+    "options": ["Personal Hypertext Processor", "PHP: Hypertext Preprocessor", "Private Home Page", "Personal Home Page"],
+    "answer": 1
+  },
+  {
+    "id": 306,
+    "module": "Modulul 3",
+    "question": "Cum se deschide o conexiune la o bază de date MySQL în PHP?",
+    "options": ["mysql_open()", "connect_mysql()", "mysqli_connect()", "dbopen()"],
+    "answer": 2
+  },
+  {
+    "id": 130,
+    "module": "Modulul 2",
+    "question": "Care este principala diferență între protocoalele TCP și UDP?",
+    "options": ["TCP e rapid, UDP e sigur", "TCP e orientat pe conexiune, UDP e fără conexiune", "UDP e doar pt e-mail", "Nu e nicio diferență"],
+    "answer": 1
+  },
+  {
+    "id": 31,
+    "module": "Modulul 1",
+    "question": "Care este operatorul folosit pentru a accesa un membru al unei structuri printr-un pointer?",
+    "options": [".", "*", "&", "->"],
+    "answer": 3
+  },
+  {
+    "id": 401,
+    "module": "Modulul 3",
+    "question": "Care este scopul diagramei de Use Case în UML?",
+    "options": ["Descrierea algoritmilor", "Descrierea interacțiunii dintre actori și sistem", "Structura bazei de date", "Calcularea timpului"],
+    "answer": 1
+  },
+  {
+    "id": 143,
+    "module": "Modulul 2",
+    "question": "Ce este un 'Deadlock' (blocaj reciproc)?",
+    "options": ["O eroare de rețea", "Două procese se așteaptă reciproc infinit", "O metodă de oprire", "O funcție de securitate"],
+    "answer": 1
+  }
 ]
