@@ -1293,7 +1293,7 @@
     "question": "Protocolul HTTPS utilizează în mod implicit portul:",
     "options": ["80", "21", "443", "8080"],
     "answer": 2
-  },
+  }
 ]
 
 
