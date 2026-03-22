@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grile Licență 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .option-btn:disabled { opacity: 1; cursor: not-allowed; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen font-sans">
+    <div class="max-w-2xl mx-auto p-4">
+        <header class="text-center py-8">
+            <h1 class="text-3xl font-bold text-blue-600">Pregătire Licență IT</h1>
+            <p class="text-gray-600 mt-2">Peste 340 de grile disponibile</p>
+        </header>
+
+        <div id="module-select" class="grid gap-4">
+            <button onclick="startQuiz('Modulul 1')" class="bg-white p-6 rounded-xl shadow-md hover:bg-blue-50 transition border-l-4 border-blue-500 font-semibold text-left">Modulul 1: Algoritmi și Programare</button>
+            <button onclick="startQuiz('Modulul 2')" class="bg-white p-6 rounded-xl shadow-md hover:bg-green-50 transition border-l-4 border-green-500 font-semibold text-left">Modulul 2: Arhitectură și Rețele</button>
+            <button onclick="startQuiz('Modulul 3')" class="bg-white p-6 rounded-xl shadow-md hover:bg-purple-50 transition border-l-4 border-purple-500 font-semibold text-left">Modulul 3: Baze de Date și Web</button>
+        </div>
+
+        <div id="quiz-container" class="hidden bg-white p-6 rounded-xl shadow-lg mt-4">
+            <div class="flex justify-between items-center mb-6">
+                <span id="progress" class="text-sm font-medium text-gray-500">Întrebarea 1</span>
+                <button onclick="location.reload()" class="text-xs bg-gray-200 px-2 py-1 rounded">Ieșire</button>
+            </div>
+            
+            <h2 id="question-text" class="text-xl font-semibold mb-6">Se încarcă întrebarea...</h2>
+            
+            <div id="options-container" class="grid gap-3">
+                </div>
+
+            <div id="feedback" class="mt-6 hidden p-4 rounded-lg font-medium text-center"></div>
+            
+            <button id="next-btn" onclick="nextQuestion()" class="hidden w-full mt-6 bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700">Următoarea Întrebare</button>
+        </div>
+
+        <div id="result-container" class="hidden text-center bg-white p-8 rounded-xl shadow-lg mt-4">
+            <h2 class="text-2xl font-bold mb-4">Final de Test!</h2>
+            <p id="score-text" class="text-4xl font-black text-blue-600 mb-4">0/0</p>
+            <button onclick="location.reload()" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold">Încearcă din nou</button>
+        </div>
+    </div>
+
+    <script>
+        let allQuestions = [];
+        let filteredQuestions = [];
+        let currentIndex = 0;
+        let score = 0;
+
+        async function loadQuestions() {
+            try {
+                const response = await fetch('questions.json');
+                allQuestions = await response.json();
+            } catch (e) {
+                console.error("Eroare la încărcarea fișierului JSON", e);
+            }
+        }
+
+        function startQuiz(moduleName) {
+            filteredQuestions = allQuestions.filter(q => q.module.includes(moduleName));
+            // Amestecăm întrebările pentru a nu fi mereu la fel
+            filteredQuestions.sort(() => Math.random() - 0.5);
+            
+            document.getElementById('module-select').classList.add('hidden');
+            document.getElementById('quiz-container').classList.remove('hidden');
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const q = filteredQuestions[currentIndex];
+            document.getElementById('progress').innerText = `Întrebarea ${currentIndex + 1} din ${filteredQuestions.length}`;
+            document.getElementById('question-text').innerText = q.question;
+            
+            const optionsDiv = document.getElementById('options-container');
+            optionsDiv.innerHTML = '';
+            
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.innerText = opt;
+                btn.className = "option-btn w-full text-left p-4 border-2 border-gray-200 rounded-lg hover:border-blue-500 transition";
+                btn.onclick = () => checkAnswer(idx, q.answer);
+                optionsDiv.appendChild(btn);
+            });
+
+            document.getElementById('feedback').classList.add('hidden');
+            document.getElementById('next-btn').classList.add('hidden');
+        }
+
+        function checkAnswer(selected, correct) {
+            const btns = document.querySelectorAll('.option-btn');
+            btns.forEach(b => b.disabled = true);
+
+            const feedback = document.getElementById('feedback');
+            feedback.classList.remove('hidden');
+
+            if(selected === correct) {
+                btns[selected].classList.add('bg-green-100', 'border-green-500');
+                feedback.innerText = "Corect! ✨";
+                feedback.className = "mt-6 p-4 rounded-lg font-medium text-center bg-green-100 text-green-700";
+                score++;
+            } else {
+                btns[selected].classList.add('bg-red-100', 'border-red-500');
+                btns[correct].classList.add('bg-green-100', 'border-green-500');
+                feedback.innerText = "Greșit. Răspunsul corect era marcat cu verde.";
+                feedback.className = "mt-6 p-4 rounded-lg font-medium text-center bg-red-100 text-red-700";
+            }
+            document.getElementById('next-btn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentIndex++;
+            if(currentIndex < filteredQuestions.length) {
+                showQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.getElementById('quiz-container').classList.add('hidden');
+            document.getElementById('result-container').classList.remove('hidden');
+            document.getElementById('score-text').innerText = `${score} / ${filteredQuestions.length}`;
+        }
+
+        loadQuestions();
+    </script>
+</body>
+</html>
