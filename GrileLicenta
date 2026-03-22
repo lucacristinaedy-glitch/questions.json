@@ -1,0 +1,443 @@
+[
+{
+    "id": 1,
+    "module": "Modulul 1",
+    "question": "Ce se va afişa pe ecran în urma execuţiei următorului program?\n#include <stdio.h>\nvoid main() {\n  int a=1, b=0, i;\n  for (i=0; i<10; i++) {\n    b=a;\n    a=i;\n  }\n  printf(\"%d\", b);\n}",
+    "options": ["8", "9", "10", "0123456789"],
+    "answer": 0
+  },
+  {
+    "id": 2,
+    "module": "Modulul 1",
+    "question": "Care din următoarele expresii sunt echivalente cu a[i]?",
+    "options": ["*(a+i)", "i [a]", "&a[i]", "*(a+a)", "*(a+i*sizeof(a[i]))"],
+    "answer": 0
+  },
+  {
+    "id": 3,
+    "module": "Modulul 1",
+    "question": "Instrucţiunea k++ este echivalentă cu:",
+    "options": ["k=k+1", "k+=1", "++k", "k=k+k", "k+=k", ".k=k+sizeof(k)"],
+    "answer": 0
+  },
+  {
+    "id": 4,
+    "module": "Modulul 1",
+    "question": "Ce se va afişa pe ecran în urma execuţiei programului (funcția f1 interschimbă valorile)?",
+    "options": ["1 2", "2 1", "2 2", "1 1"],
+    "answer": 1
+  },
+  {
+    "id": 5,
+    "module": "Modulul 1",
+    "question": "Se dă fragmentul: for(i=1; i<10; i++) { if (i%4==0) continue; printf('%d', i); if (i%7==0) break; }. Ce se afișează?",
+    "options": ["123567", "1234567", "12356", "123"],
+    "answer": 0
+  },
+  {
+    "id": 6,
+    "module": "Modulul 1",
+    "question": "Care este valoarea expresiei 5/2 + 5.0/2.0 + 5/2.0?",
+    "options": ["6.5", "7.0", "6.0", "7.5"],
+    "answer": 1
+  },
+  {
+    "id": 7,
+    "module": "Modulul 1",
+    "question": "Ce face funcția `malloc`?",
+    "options": ["Alocă memorie în segmentul de date", "Alocă memorie în heap", "Alocă memorie în stivă", "Eliberează memoria"],
+    "answer": 1
+  },
+  {
+    "id": 8,
+    "module": "Modulul 1",
+    "question": "Ce se afișează dacă v=1 și apelăm f(&v) unde f(int *x){ x=(int*)malloc(sizeof(int)); *x=15; }?",
+    "options": ["1", "15", "Eroare de compilare", "0"],
+    "answer": 0
+  },
+  {
+    "id": 9,
+    "module": "Modulul 1",
+    "question": "Care este operatorul de dereferențiere a unui pointer?",
+    "options": ["&", "*", "->", "."],
+    "answer": 1
+  },
+  {
+    "id": 10,
+    "module": "Modulul 1",
+    "question": "Ce returnează operatorul `sizeof`?",
+    "options": ["Dimensiunea în biți", "Dimensiunea în octeți (bytes)", "Numărul de elemente", "Adresa variabilei"],
+    "answer": 1
+  },
+  {
+    "id": 11,
+    "module": "Modulul 1",
+    "question": "Un tablou cu 10 elemente de tip int, indexat de la 0, are ultimul element pe poziția:",
+    "options": ["10", "9", "11", "0"],
+    "answer": 1
+  },
+  {
+    "id": 12,
+    "module": "Modulul 1",
+    "question": "Care este valoarea lui x după: int x=10; { int x=20; }?",
+    "options": ["20", "10", "30", "Eroare"],
+    "answer": 1
+  },
+  {
+    "id": 13,
+    "module": "Modulul 1",
+    "question": "Ce afișează: printf('%d', 10 >> 1)?",
+    "options": ["20", "5", "10", "1"],
+    "answer": 1
+  },
+  {
+    "id": 14,
+    "module": "Modulul 1",
+    "question": "Ce afișează: printf('%d', 5 & 3)?",
+    "options": ["1", "7", "5", "8"],
+    "answer": 0
+  },
+  {
+    "id": 15,
+    "module": "Modulul 1",
+    "question": "Ce se va afişa pe ecran în urma execuţiei: int x; x=1,2,3; printf('%d', x);?",
+    "options": ["1", "3", "2", "6"],
+    "answer": 0
+  }
+{
+    "id": 1,
+    "module": "Modulul 1",
+    "question": "Ce se va afişa pe ecran în urma execuţiei următorului program?\n#include <stdio.h>\nvoid main() {\n  int a=1, b=0, i;\n  for (i=0; i<10; i++) {\n    b=a;\n    a=i;\n  }\n  printf(\"%d\", b);\n}",
+    "options": ["8", "9", "10", "0123456789"],
+    "answer": 1
+  },
+  {
+    "id": 2,
+    "module": "Modulul 1",
+    "question": "Care din următoarele expresii sunt echivalente cu a[i]?",
+    "options": ["*(a+i)", "i [a]", "&a[i]", "*(a+a)", "*(a+i*sizeof(a[i]))"],
+    "answer": 0
+  },
+  {
+    "id": 3,
+    "module": "Modulul 1",
+    "question": "Instrucţiunea k++ este echivalentă cu:",
+    "options": ["k=k+1", "k+=1", "++k", "k=k+k", "k+=k", ".k=k+sizeof(k)"],
+    "answer": 0
+  },
+  {
+    "id": 4,
+    "module": "Modulul 1",
+    "question": "Ce se va afişa pe ecran în urma execuţiei programului (f1 interschimbă *r cu *s)?",
+    "options": ["1 2", "2 1", "2 2", "1 1"],
+    "answer": 1
+  },
+  {
+    "id": 5,
+    "module": "Modulul 1",
+    "question": "Se dă fragmentul: for(i=1; i<10; i++) { if (i%4==0) continue; printf(\"%d\", i); if (i%7==0) break; }",
+    "options": ["123567", "1234567", "12356", "123"],
+    "answer": 0
+  },
+  {
+    "id": 6,
+    "module": "Modulul 1",
+    "question": "Care este valoarea expresiei 5/2 + 5.0/2.0 + 5/2.0?",
+    "options": ["6.5", "7.0", "6.0", "7.5"],
+    "answer": 1
+  },
+  {
+    "id": 7,
+    "module": "Modulul 1",
+    "question": "Ce se va afişa în urma: int a=5, b=2; printf(\"%f\", (float)a/b);",
+    "options": ["2.000000", "2.500000", "2", "0.400000"],
+    "answer": 1
+  },
+  {
+    "id": 8,
+    "module": "Modulul 1",
+    "question": "Ce se afişează dacă f(int *x) { x=(int*)malloc(sizeof(int)); *x=15; } și apelăm f(&v) unde v=1?",
+    "options": ["1", "15", "12", "0"],
+    "answer": 0
+  },
+  {
+    "id": 15,
+    "module": "Modulul 1",
+    "question": "Ce se va afişa: int x; x=1,2,3; printf(\"%d\", x);",
+    "options": ["1", "7", "2", "3"],
+    "answer": 0
+  },
+  {
+    "id": 16,
+    "module": "Modulul 1",
+    "question": "Ce se afişează: int array[3][]; array[0][0]=1; ...?",
+    "options": ["nimic (eroare compilare)", "15", "1", "0"],
+    "answer": 0
+  },
+  {
+    "id": 17,
+    "module": "Modulul 1",
+    "question": "Complexitatea Mergesort t(n) = 2t(n/2) + n este:",
+    "options": ["Θ(n log n)", "Θ(n)", "Θ(n^2)", "Θ(log n)"],
+    "answer": 0
+  },
+  {
+    "id": 18,
+    "module": "Modulul 1",
+    "question": "Turnurile din Hanoi t(n) = 2t(n-1) + 1 are complexitatea:",
+    "options": ["O(n)", "O(2^n)", "O(log n)", "O(n^2)"],
+    "answer": 1
+  }
+{
+    "id": 19,
+    "module": "Modulul 1",
+    "question": "Care este ordinul de complexitate pentru parcurgerea unui arbore binar cu n noduri?",
+    "options": ["O(log n)", "O(n)", "O(n log n)", "O(n^2)"],
+    "answer": 1
+  },
+  {
+    "id": 20,
+    "module": "Modulul 1",
+    "question": "Metoda căutării binare are o complexitate de tip:",
+    "options": ["O(n)", "O(n^2)", "O(log n)", "O(1)"],
+    "answer": 2
+  },
+  {
+    "id": 101,
+    "module": "Modulul 2",
+    "question": "Exprimați în binar, octal, hexazecimal numărul zecimal 3.625",
+    "options": ["11.2000; 3.42; 4.20", "11.101; 3.5; 3.A", "2.1001; 3.52; 2D", "11.1; 3.20; 3.2A"],
+    "answer": 1
+  },
+  {
+    "id": 102,
+    "module": "Modulul 2",
+    "question": "Convertiţi în zecimal numărul DA.C (baza 16):",
+    "options": ["216.5", "218.75", "218.5", "220"],
+    "answer": 1
+  },
+  {
+    "id": 103,
+    "module": "Modulul 2",
+    "question": "Valoarea zecimală cu semn a numărului B7 (hexazecimal) codificat în complement faţă de 1 pe 8 biţi este:",
+    "options": ["-71", "-72", "-73", "183"],
+    "answer": 1
+  },
+  {
+    "id": 104,
+    "module": "Modulul 2",
+    "question": "Unitatea aritmetico-logică (UAL) face parte din:",
+    "options": ["Memoria internă", "Unitatea Centrală de Prelucrare (CPU)", "Dispozitive de intrare", "Bus-ul de date"],
+    "answer": 1
+  },
+  {
+    "id": 105,
+    "module": "Modulul 2",
+    "question": "Care este rolul registrului Program Counter (PC)?",
+    "options": ["Numără instrucțiunile executate", "Păstrează adresa următoarei instrucţiuni ce va fi executată", "Păstrează rezultatul ultimei operații", "Controlează viteza ventilatorului"],
+    "answer": 1
+  },
+  {
+    "id": 106,
+    "module": "Modulul 2",
+    "question": "Memoria de tip Pipeline se bazează pe:",
+    "options": ["Execuția secvențială a instrucțiunilor", "Suprapunerea în timp a etapelor de execuție a mai multor instrucțiuni", "Mărirea capacității discului dur", "Reducerea consumului de curent"],
+    "answer": 1
+  },
+  {
+    "id": 107,
+    "module": "Modulul 2",
+    "question": "În ierarhia memoriilor, memoria Cache este:",
+    "options": ["Mai lentă decât RAM-ul", "Mai rapidă decât registrele CPU", "O memorie rapidă situată între CPU și RAM", "O memorie de tip volatil doar pentru video"],
+    "answer": 2
+  },
+  {
+    "id": 108,
+    "module": "Modulul 2",
+    "question": "Un sistem de operare are rolul de a:",
+    "options": ["Cripta toate datele utilizatorului", "Gestiona resursele hardware și a oferi o interfață utilizatorului", "Compila codul C++", "Înlocui procesorul"],
+    "answer": 1
+  },
+  {
+    "id": 109,
+    "module": "Modulul 2",
+    "question": "Ce înseamnă fragmentarea memoriei externe (pe HDD)?",
+    "options": ["Ruperea discului în bucăți", "Stocarea unui fișier în zone necontigue (împrăștiate) pe disc", "Ștergerea accidentală a datelor", "Formatarea rapidă"],
+    "answer": 1
+  },
+  {
+    "id": 110,
+    "module": "Modulul 2",
+    "question": "Protocolul IP (Internet Protocol) funcționează la nivelul:",
+    "options": ["Aplicație", "Transport", "Rețea", "Legătură de date"],
+    "answer": 2
+  }
+{
+    "id": 111,
+    "module": "Modulul 2",
+    "question": "Ce este un 'Sniffer' în contextul rețelelor de calculatoare?",
+    "options": ["Un sistem de operare securizat", "Un software care analizează traficul de date dintr-o rețea", "Un program de curățare a virușilor", "Un protocol de rutare"],
+    "answer": 1
+  },
+  {
+    "id": 112,
+    "module": "Modulul 2",
+    "question": "Protocoalele SSL și TLS sunt utilizate pentru:",
+    "options": ["Mărirea vitezei de download", "Securizarea comunicațiilor în rețea prin criptare", "Partajarea fișierelor pe un server local", "Verificarea integrității hard-disk-ului"],
+    "answer": 1
+  },
+  {
+    "id": 201,
+    "module": "Modulul 3",
+    "question": "Între avantajele bazelor de date se numără:",
+    "options": ["Nepartajarea datelor între utilizatori", "Organizarea datelor pe două niveluri fizic şi logic", "Gestionarea centralizată a datelor printr-un SGBD", "Independenţa datelor faţă de programele de aplicaţii"],
+    "answer": 2
+  },
+  {
+    "id": 202,
+    "module": "Modulul 3",
+    "question": "O entitate se caracterizează prin:",
+    "options": ["Este identificată unic printr-un nume", "Cuprinde mai multe realizări", "Administrează obiecte", "Semnifică un obiect concret sau abstract, reprezentat prin proprietăţile sale"],
+    "answer": 3
+  },
+  {
+    "id": 203,
+    "module": "Modulul 3",
+    "question": "O entitate din modelul Entitate-Asociere (E-A) trebuie să fie:",
+    "options": ["Întotdeauna concretă", "Definită fără ambiguităţi", "Identificată unic prin ansamblul atributelor sale", "Legată obligatoriu de o altă entitate"],
+    "answer": 1
+  },
+  {
+    "id": 204,
+    "module": "Modulul 3",
+    "question": "Administratorul bazei de date (DBA) asigură:",
+    "options": ["Scrierea programelor în cod-maşină", "Autorizarea accesului la date", "Definirea strategiei de salvare şi restaurare", "Crearea programelor de aplicaţii"],
+    "answer": 2
+  },
+  {
+    "id": 205,
+    "module": "Modulul 3",
+    "question": "Într-un model relațional, un rând dintr-un tabel se mai numește și:",
+    "options": ["Atribut", "Domeniu", "Tuplu", "Relație"],
+    "answer": 2
+  },
+  {
+    "id": 206,
+    "module": "Modulul 3",
+    "question": "O cheie primară are rolul de a:",
+    "options": ["Sorta datele alfabetic", "Identifica în mod unic fiecare înregistrare dintr-un tabel", "Cripta parola bazei de date", "Permite valori nule (NULL)"],
+    "answer": 1
+  },
+  {
+    "id": 207,
+    "module": "Modulul 3",
+    "question": "Comanda SQL 'SELECT DISTINCT' este folosită pentru:",
+    "options": ["A selecta doar valorile diferite (unice)", "A șterge duplicatele din tabel definitiv", "A număra toate rândurile", "A schimba numele unei coloane"],
+    "answer": 0
+  },
+  {
+    "id": 208,
+    "module": "Modulul 3",
+    "question": "Care clauză SQL este utilizată pentru a filtra rezultatele unui grup (după GROUP BY)?",
+    "options": ["WHERE", "ORDER BY", "HAVING", "DISTINCT"],
+    "answer": 2
+  },
+  {
+    "id": 209,
+    "module": "Modulul 3",
+    "question": "Operația 'JOIN' în SQL servește la:",
+    "options": ["Combinarea rândurilor din două sau mai multe tabele pe baza unei coloane comune", "Adunarea valorilor numerice dintr-o coloană", "Ștergerea legăturilor între tabele", "Crearea unei baze de date noi"],
+    "answer": 0
+  },
+  {
+    "id": 210,
+    "module": "Modulul 3",
+    "question": "Comanda SQL pentru a șterge toate datele dintr-un tabel fără a șterge structura tabelului este:",
+    "options": ["REMOVE TABLE", "DROP TABLE", "TRUNCATE TABLE", "DELETE DATABASE"],
+    "answer": 2
+  }{
+    "id": 211,
+    "module": "Modulul 3",
+    "question": "Ce este o 'vedere' (VIEW) într-o bază de date?",
+    "options": ["O copie fizică a tabelului", "Un tabel virtual bazat pe rezultatul unei interogări SELECT", "O metodă de criptare a bazei de date", "Un raport printat"],
+    "answer": 1
+  },
+  {
+    "id": 212,
+    "module": "Modulul 3",
+    "question": "Indexarea într-o bază de date este utilizată în principal pentru:",
+    "options": ["A economisi spațiu pe disc", "A mări viteza de recuperare a datelor", "A securiza conexiunea la server", "A șterge duplicatele"],
+    "answer": 1
+  },
+  {
+    "id": 301,
+    "module": "Modulul 3 - Web",
+    "question": "Care este tag-ul HTML corect pentru cea mai mare dimensiune de titlu?",
+    "options": ["<h6>", "<head>", "<h1>", "<heading>"],
+    "answer": 2
+  },
+  {
+    "id": 302,
+    "module": "Modulul 3 - Web",
+    "question": "Cum se inserează o linie orizontală în HTML?",
+    "options": ["<line>", "<br>", "<hr>", "<border>"],
+    "answer": 2
+  },
+  {
+    "id": 303,
+    "module": "Modulul 3 - Web",
+    "question": "Care este sintaxa corectă pentru a referi un script extern numit 'script.js'?",
+    "options": ["<script href='script.js'>", "<script name='script.js'>", "<script src='script.js'>", "<script file='script.js'>"],
+    "answer": 2
+  },
+  {
+    "id": 304,
+    "module": "Modulul 3 - Web",
+    "question": "În JavaScript, cum scrii 'Hello World' într-o fereastră de alertă?",
+    "options": ["msg('Hello World');", "alertBox('Hello World');", "alert('Hello World');", "console.log('Hello World');"],
+    "answer": 2
+  },
+  {
+    "id": 305,
+    "module": "Modulul 3 - Web",
+    "question": "Ce înseamnă PHP?",
+    "options": ["Personal Hypertext Processor", "PHP: Hypertext Preprocessor", "Private Home Page", "Personal Home Page"],
+    "answer": 1
+  },
+  {
+    "id": 306,
+    "module": "Modulul 3 - Web",
+    "question": "Cum se deschide o conexiune la o bază de date MySQL în PHP?",
+    "options": ["mysql_open('localhost');", "connect_mysql('localhost');", "mysqli_connect('localhost');", "dbopen('localhost');"],
+    "answer": 2
+  },
+  {
+    "id": 307,
+    "module": "Modulul 3 - Web",
+    "question": "Care simbol este folosit pentru variabile în PHP?",
+    "options": ["&", "!", "$", "#"],
+    "answer": 2
+  },
+  {
+    "id": 308,
+    "module": "Modulul 3 - Web",
+    "question": "Unde este locul corect pentru a insera JavaScript într-o pagină HTML?",
+    "options": ["Doar în <head>", "Doar în <body>", "Atât în <head> cât și în <body>", "În secțiunea <title>"],
+    "answer": 2
+  },
+  {
+    "id": 309,
+    "module": "Modulul 3 - Web",
+    "question": "Cum se scrie un comentariu în PHP?",
+    "options": ["", "' comentariu", "// comentariu", "/* comentariu */", "Ultimele două variante sunt corecte"],
+    "answer": 4
+  },
+  {
+    "id": 310,
+    "module": "Modulul 3 - Web",
+    "question": "Care este metoda corectă de a adăuga 1 la variabila $count în PHP?",
+    "options": ["$count =+1", "++count", "$count++;", "count++;"],
+    "answer": 2
+  }
+]
+
